@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kibarato Educa - Seu Currículo com Muito Mais Valor</title>
+    <meta name="robots" content="noindex">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kibarato: {
+                            dark: '#022C15', // Verde escuro fundo
+                            neon: '#9EFF00', // Verde limão vibrante
+                            card: '#0A3F22', // Verde dos cards
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'dots': 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #022C15;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-dots {
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(158, 255, 0, 0.3);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #022C15; }
+        ::-webkit-scrollbar-thumb { background: #0A3F22; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9EFF00; }
+    </style>
+</head>
+<body class="bg-dots antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-[#9EFF00] rounded-full flex items-center justify-center text-[#022C15] font-black text-xl">
+                    K
+                </div>
+                <span class="text-xl md:text-2xl font-bold text-white">KiBarato <span class="text-[#9EFF00]">Educa</span></span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="text-sm font-medium hover:text-[#9EFF00] transition-colors">Início</a>
+                <a href="#trilhas" class="text-sm font-medium hover:text-[#9EFF00] transition-colors">Trilhas</a>
+                <a href="#idiomas" class="text-sm font-medium hover:text-[#9EFF00] transition-colors">Idiomas</a>
+                <a href="#beneficios" class="text-sm font-medium hover:text-[#9EFF00] transition-colors">Benefícios</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="https://app.kibarato.com.br" class="bg-[#9EFF00] text-[#022C15] px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform flex items-center gap-2 shadow-[0_0_15px_rgba(158,255,0,0.3)]">
+                    <i class="fas fa-download"></i> Baixar App
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-2xl" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#022C15]/95 backdrop-blur-xl border-t border-white/10 p-6 flex-col gap-4 shadow-xl md:hidden">
+            <a href="#inicio" class="text-lg font-medium py-2 border-b border-white/5">Início</a>
+            <a href="#trilhas" class="text-lg font-medium py-2 border-b border-white/5">Trilhas</a>
+            <a href="#idiomas" class="text-lg font-medium py-2 border-b border-white/5">Idiomas</a>
+            <a href="#beneficios" class="text-lg font-medium py-2 border-b border-white/5">Benefícios</a>
+            <a href="https://app.kibarato.com.br" class="bg-[#9EFF00] text-[#022C15] p-3 rounded-lg font-bold text-center mt-2">Baixar App Agora</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 overflow-hidden min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            
+            <!-- Text Content -->
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#9EFF00]/30 bg-[#9EFF00]/5 mb-8">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9EFF00] opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-[#9EFF00]"></span>
+                    </span>
+                    <span class="text-xs font-bold tracking-wider text-[#9EFF00] uppercase">Educação de Qualidade</span>
+                </div>
+
+                <h1 class="text-5xl lg:text-7xl font-black text-white leading-[0.95] mb-6 tracking-tight">
+                    Com a KiBarato seu currículo tem <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#9EFF00] to-emerald-400">muito mais valor.</span>
+                </h1>
+
+                <p class="text-gray-300 text-lg mb-8 leading-relaxed max-w-xl">
+                    Descubra trilhas personalizadas de aprendizado com os melhores cursos do mercado. <span class="text-white font-bold">Artes, Design, Tecnologia</span> e muito mais. <span class="text-[#9EFF00] font-black">Tudo em um só lugar.</span>
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://app.kibarato.com.br" class="bg-[#9EFF00] text-[#022C15] px-8 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-all text-center shadow-[0_0_30px_rgba(158,255,0,0.4)] flex items-center justify-center gap-3 group">
+                        BAIXAR APP E COMEÇAR
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <p class="mt-6 text-sm text-gray-500 font-medium flex items-center gap-2">
+                    <i class="fas fa-graduation-cap text-[#9EFF00]"></i> Cursos com Certificado
+                </p>
+            </div>
+
+            <!-- Mascote Image -->
+            <div class="relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+                <!-- Glow Effect -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#9EFF00] rounded-full blur-[120px] opacity-15"></div>
+                
+                <img src="Imagem colada.png" alt="Mascote Kibarato Educa" class="relative z-10 w-full max-w-md lg:max-w-lg object-contain drop-shadow-2xl animate-float">
+                
+                <!-- Floating Card -->
+                <div class="absolute bottom-20 -left-6 bg-white p-5 rounded-2xl shadow-2xl hidden lg:block rotate-[-3deg] max-w-[220px] z-20 border-l-4 border-[#9EFF00]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-10 h-10 bg-[#022C15] rounded-full flex items-center justify-center text-[#9EFF00] font-bold text-lg">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase">Cursos Disponíveis</p>
+                            <p class="text-[#022C15] font-black text-xl">+1000</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs font-medium bg-gray-100 p-2 rounded-lg">
+                        Aprenda no seu ritmo! 📚
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-[#0A3F22] border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center border-r border-white/10 last:border-0" data-aos="fade-up">
+                <p class="text-4xl md:text-5xl font-black text-white">+1000</p>
+                <p class="text-xs text-[#9EFF00] uppercase font-bold tracking-[0.2em] mt-2">Cursos</p>
+            </div>
+            <div class="text-center border-r border-white/10 last:border-0" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-4xl md:text-5xl font-black text-white">14</p>
+                <p class="text-xs text-[#9EFF00] uppercase font-bold tracking-[0.2em] mt-2">Parceiros</p>
+            </div>
+            <div class="text-center border-r border-white/10 last:border-0" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-4xl md:text-5xl font-black text-white">19</p>
+                <p class="text-xs text-[#9EFF00] uppercase font-bold tracking-[0.2em] mt-2">Trilhas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trilhas Section -->
+    <section id="trilhas" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-[#9EFF00] font-bold tracking-widest uppercase text-sm mb-2 block">Aprendizado Personalizado</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">
+                    Escolha Sua <span class="text-[#9EFF00]">Trilha de Aprendizado</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Explore diferentes áreas de conhecimento e encontre os melhores cursos de nossos parceiros educacionais.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Trilha 1 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Exatas e Tecnologia</h3>
+                    <p class="text-gray-400 text-sm">Matemática, Física, Química e cursos de tecnologia avançada.</p>
+                </div>
+
+                <!-- Trilha 2 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Informática</h3>
+                    <p class="text-gray-400 text-sm">Programação, desenvolvimento e tecnologia da informação.</p>
+                </div>
+
+                <!-- Trilha 3 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Direito</h3>
+                    <p class="text-gray-400 text-sm">Cursos jurídicos e preparação para carreira legal.</p>
+                </div>
+
+                <!-- Trilha 4 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Administração</h3>
+                    <p class="text-gray-400 text-sm">Gestão, negócios e administração empresarial.</p>
+                </div>
+
+                <!-- Trilha 5 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Marketing, Comunicação e Vendas</h3>
+                    <p class="text-gray-400 text-sm">Estratégias de marketing, comunicação e técnicas de vendas.</p>
+                </div>
+
+                <!-- Trilha 6 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Artes, Design e Comunicação</h3>
+                    <p class="text-gray-400 text-sm">Design gráfico, artes visuais e comunicação visual.</p>
+                </div>
+
+                <!-- Trilha 7 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Psicologia</h3>
+                    <p class="text-gray-400 text-sm">Cursos de psicologia e desenvolvimento humano.</p>
+                </div>
+
+                <!-- Trilha 8 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Educação</h3>
+                    <p class="text-gray-400 text-sm">Formação de professores e pedagogia.</p>
+                </div>
+
+                <!-- Trilha 9 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="800">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Nutrição</h3>
+                    <p class="text-gray-400 text-sm">Alimentação saudável e nutrição clínica.</p>
+                </div>
+
+                <!-- Trilha 10 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="900">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Saúde e Bem Estar</h3>
+                    <p class="text-gray-400 text-sm">Cuidados com a saúde e qualidade de vida.</p>
+                </div>
+
+                <!-- Trilha 11 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Meio Ambiente</h3>
+                    <p class="text-gray-400 text-sm">Sustentabilidade e preservação ambiental.</p>
+                </div>
+
+                <!-- Trilha 12 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Concursos Públicos</h3>
+                    <p class="text-gray-400 text-sm">Preparação completa para concursos.</p>
+                </div>
+
+                <!-- Trilha 13 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">ENEM</h3>
+                    <p class="text-gray-400 text-sm">Preparação completa para o Exame Nacional do Ensino Médio.</p>
+                </div>
+
+                <!-- Trilha 14 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="1300">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Gastronomia e Confeitaria</h3>
+                    <p class="text-gray-400 text-sm">Arte culinária e técnicas de confeitaria.</p>
+                </div>
+
+                <!-- Trilha 15 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="1400">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Segurança do Trabalho</h3>
+                    <p class="text-gray-400 text-sm">Normas e práticas de segurança ocupacional.</p>
+                </div>
+
+                <!-- Trilha 16 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="1500">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Profissões e Técnicas</h3>
+                    <p class="text-gray-400 text-sm">Cursos técnicos e profissionalizantes.</p>
+                </div>
+
+                <!-- Trilha 17 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group" data-aos="fade-up" data-aos-delay="1600">
+                    <div class="w-14 h-14 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Profissionalizantes</h3>
+                    <p class="text-gray-400 text-sm">Cursos para inserção no mercado de trabalho.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="https://app.kibarato.com.br" class="inline-flex items-center gap-3 text-[#9EFF00] font-black uppercase tracking-widest hover:gap-5 transition-all border-b-2 border-[#9EFF00] pb-1">
+                    Baixar app e explorar trilhas <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outros Benefícios Section -->
+    <section id="beneficios" class="py-24 bg-[#0A3F22]/50 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#9EFF00]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-[#9EFF00] font-bold tracking-widest uppercase text-sm mb-2 block">Por que escolher o KiBarato?</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-4">8 Motivos para você ter o <span class="text-[#9EFF00]">KiBarato</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- Benefício 1 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group flex items-start gap-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-12 h-12 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-xl flex-shrink-0 group-hover:scale-110 transition-transform">1</div>
+                    <div>
+                        <p class="text-white font-medium leading-relaxed">Desconto de até <strong class="text-[#9EFF00]">90%</strong> em redes de farmácias</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 2 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-xl flex-shrink-0 group-hover:scale-110 transition-transform">2</div>
+                    <div>
+                        <p class="text-white font-medium leading-relaxed">Descontos em mais de <strong class="text-[#9EFF00]">30 mil lugares</strong> em todo Brasil</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 3 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-xl flex-shrink-0 group-hover:scale-110 transition-transform">3</div>
+                    <div>
+                        <p class="text-white font-medium leading-relaxed">Desconto de <strong class="text-[#9EFF00]">10 a 40%</strong> na sua conta de energia</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 4 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-[#9EFF00]/30 hover:border-[#9EFF00] transition-all group flex items-start gap-4 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#9EFF00]/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
+                    <div class="w-12 h-12 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-xl flex-shrink-0 group-hover:scale-110 transition-transform relative z-10">4</div>
+                    <div class="relative z-10">
+                        <p class="text-white font-medium leading-relaxed">Economize até <strong class="text-[#9EFF00]">R$ 400,00 por mês</strong> com descontos de <strong class="text-[#9EFF00]">0,30 a 0,90 centavos</strong> por litro em combustível em mais de <strong class="text-[#9EFF00]">800 postos</strong> no Brasil*</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 5 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group flex items-start gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-xl flex-shrink-0 group-hover:scale-110 transition-transform">5</div>
+                    <div>
+                        <p class="text-white font-medium leading-relaxed">Compras com <strong class="text-[#9EFF00]">cash back de verdade</strong> (você compra e cai dinheiro na hora na sua carteira)</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 6 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group flex items-start gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-12 h-12 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-xl flex-shrink-0 group-hover:scale-110 transition-transform">6</div>
+                    <div>
+                        <p class="text-white font-medium leading-relaxed">Mais de <strong class="text-[#9EFF00]">1000 cursos online</strong> profissionalizantes (sem custo adicional)</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 7 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group flex items-start gap-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-12 h-12 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-xl flex-shrink-0 group-hover:scale-110 transition-transform">7</div>
+                    <div>
+                        <p class="text-white font-medium leading-relaxed">Desconto de <strong class="text-[#9EFF00]">40 a 60%</strong> nos cinemas</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 8 -->
+                <div class="bg-[#022C15] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group flex items-start gap-4" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-12 h-12 rounded-xl bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-xl flex-shrink-0 group-hover:scale-110 transition-transform">8</div>
+                    <div>
+                        <p class="text-white font-medium leading-relaxed"><strong class="text-[#9EFF00]">Kibarato Fitness</strong>, seu personal trainer na palma da sua mão!!</p>
+                    </div>
+                </div>
+
+                <!-- Benefício Extra - Destaque -->
+                <div class="bg-gradient-to-br from-[#9EFF00]/20 to-[#9EFF00]/5 p-6 rounded-2xl border-2 border-[#9EFF00]/50 hover:border-[#9EFF00] transition-all group flex items-center justify-center gap-3 md:col-span-2" data-aos="fade-up" data-aos-delay="800">
+                    <span class="text-4xl">💚</span>
+                    <p class="text-white font-bold text-xl">E muito, mas <span class="text-[#9EFF00] text-2xl">MUITO MAIS</span></p>
+                </div>
+            </div>
+
+            <p class="text-center text-gray-500 text-xs mt-8 opacity-0">.</p>
+        </div>
+    </section>
+
+    <!-- Idiomas Section -->
+    <section id="idiomas" class="py-24 relative overflow-hidden bg-[#0A3F22]/30">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-[#9EFF00] font-bold tracking-widest uppercase text-sm mb-2 block">Aprenda Idiomas</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">
+                    Mais de <span class="text-[#9EFF00]">6 Línguas Diferentes</span> em Diversos Níveis
+                </h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Domine novos idiomas com cursos completos do básico ao avançado. Aprenda no seu ritmo e conquiste fluência.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Idioma 1 -->
+                <div class="bg-gradient-to-br from-[#022C15] to-[#0A3F22] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 rounded-full bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Inglês</h3>
+                    <p class="text-gray-400 text-xs">Básico ao Avançado</p>
+                </div>
+
+                <!-- Idioma 2 -->
+                <div class="bg-gradient-to-br from-[#022C15] to-[#0A3F22] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Espanhol</h3>
+                    <p class="text-gray-400 text-xs">Básico ao Avançado</p>
+                </div>
+
+                <!-- Idioma 3 -->
+                <div class="bg-gradient-to-br from-[#022C15] to-[#0A3F22] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Francês</h3>
+                    <p class="text-gray-400 text-xs">Básico ao Avançado</p>
+                </div>
+
+                <!-- Idioma 4 -->
+                <div class="bg-gradient-to-br from-[#022C15] to-[#0A3F22] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Alemão</h3>
+                    <p class="text-gray-400 text-xs">Básico ao Avançado</p>
+                </div>
+
+                <!-- Idioma 5 -->
+                <div class="bg-gradient-to-br from-[#022C15] to-[#0A3F22] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-full bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Italiano</h3>
+                    <p class="text-gray-400 text-xs">Básico ao Avançado</p>
+                </div>
+
+                <!-- Idioma 6 -->
+                <div class="bg-gradient-to-br from-[#022C15] to-[#0A3F22] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 rounded-full bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Japonês</h3>
+                    <p class="text-gray-400 text-xs">Básico ao Avançado</p>
+                </div>
+
+                <!-- Idioma 7 -->
+                <div class="bg-gradient-to-br from-[#022C15] to-[#0A3F22] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 rounded-full bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Mandarim</h3>
+                    <p class="text-gray-400 text-xs">Básico ao Avançado</p>
+                </div>
+
+                <!-- Idioma 8 -->
+                <div class="bg-gradient-to-br from-[#022C15] to-[#0A3F22] p-6 rounded-2xl border border-white/5 hover:border-[#9EFF00]/50 transition-all group text-center" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-16 h-16 rounded-full bg-[#9EFF00] text-[#022C15] flex items-center justify-center font-black text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">E Muito Mais!</h3>
+                    <p class="text-gray-400 text-xs">Outros idiomas disponíveis</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-[#9EFF00]/10 to-[#9EFF00]/5 p-8 rounded-2xl border border-[#9EFF00]/30 text-center" data-aos="fade-up">
+                <h3 class="text-2xl font-black text-white mb-4">Aprenda no Seu Ritmo</h3>
+                <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+                    Todos os cursos de idiomas incluem níveis do básico ao avançado, com certificados reconhecidos e material completo para você dominar qualquer língua.
+                </p>
+                <a href="https://app.kibarato.com.br" class="inline-flex items-center gap-3 bg-[#9EFF00] text-[#022C15] px-8 py-4 rounded-full font-black hover:scale-105 transition-all shadow-[0_0_30px_rgba(158,255,0,0.3)]">
+                    Baixar App e Começar Agora
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova Seção de Oferta Irresistível -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#022C15]"></div>
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#0A3F22]/0 via-[#9EFF00]/5 to-[#0A3F22]/0"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="bg-[#052e16]/80 backdrop-blur-xl rounded-[3rem] border border-[#9EFF00]/30 p-8 md:p-16 text-center relative overflow-hidden shadow-[0_0_50px_rgba(158,255,0,0.1)]" data-aos="zoom-in">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 bg-[#9EFF00] text-[#022C15] px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-wider mb-8 shadow-lg shadow-[#9EFF00]/20">
+                    <i class="fas fa-star"></i> Oferta Exclusiva
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+                    Transforme seu <span class="text-[#9EFF00]">currículo</span> hoje mesmo
+                </h2>
+                
+                <p class="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                    Acesse mais de +1000 cursos, 19 trilhas de aprendizado e aprenda idiomas. Tudo isso e muito mais em um só lugar.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-left">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <div class="text-[#9EFF00] text-2xl mb-3"><i class="fas fa-graduation-cap"></i></div>
+                        <h4 class="text-white font-bold mb-1">+1000 Cursos</h4>
+                        <p class="text-gray-400 text-sm">Dos melhores parceiros educacionais.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <div class="text-[#9EFF00] text-2xl mb-3"><i class="fas fa-route"></i></div>
+                        <h4 class="text-white font-bold mb-1">19 Trilhas</h4>
+                        <p class="text-gray-400 text-sm">Aprendizado personalizado por área.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <div class="text-[#9EFF00] text-2xl mb-3"><i class="fas fa-globe"></i></div>
+                        <h4 class="text-white font-bold mb-1">6+ Idiomas</h4>
+                        <p class="text-gray-400 text-sm">Do básico ao avançado com certificado.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-4">
+                    <a href="https://app.kibarato.com.br" class="group relative px-10 py-5 bg-[#9EFF00] text-[#022C15] rounded-full font-black text-xl shadow-[0_0_30px_rgba(158,255,0,0.4)] hover:shadow-[0_0_50px_rgba(158,255,0,0.6)] hover:scale-105 transition-all duration-300 w-full md:w-auto">
+                        <span class="relative z-10 flex items-center justify-center gap-3">
+                            BAIXAR APP AGORA
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                        <div class="absolute inset-0 rounded-full bg-white/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </a>
+                    <p class="text-gray-400 text-sm flex items-center gap-2">
+                        <i class="fas fa-download text-[#9EFF00]"></i> 100% Gratuito e Seguro
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-[#022C15] relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#9EFF00] font-bold tracking-widest uppercase text-sm mb-2 block">Dúvidas Frequentes</span>
+                <h2 class="text-4xl font-black text-white">Perguntas <span class="text-[#9EFF00]">Frequentes</span></h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="group bg-[#052e16] rounded-2xl border border-white/5 overflow-hidden transition-all hover:border-[#9EFF00]/30" data-aos="fade-up">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center">
+                        <span class="font-bold text-white text-lg">Como acesso os cursos do KiBarato Educa?</span>
+                        <i class="fas fa-plus text-[#9EFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                        É simples! Baixe o app KiBarato, faça seu cadastro e acesse a seção KiBarato Educa. Lá você encontrará mais de +1000 cursos organizados em 19 trilhas de aprendizado, incluindo cursos de idiomas.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="group bg-[#052e16] rounded-2xl border border-white/5 overflow-hidden transition-all hover:border-[#9EFF00]/30" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center">
+                        <span class="font-bold text-white text-lg">Os cursos têm certificado?</span>
+                        <i class="fas fa-plus text-[#9EFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                        Sim! Todos os cursos oferecem certificados reconhecidos que você pode adicionar ao seu currículo. Os certificados são emitidos pelos nossos parceiros educacionais de confiança.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="group bg-[#052e16] rounded-2xl border border-white/5 overflow-hidden transition-all hover:border-[#9EFF00]/30" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center">
+                        <span class="font-bold text-white text-lg">Quantos idiomas posso aprender?</span>
+                        <i class="fas fa-plus text-[#9EFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                        Oferecemos cursos de mais de 6 idiomas diferentes, incluindo Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Mandarim e muito mais. Todos os cursos têm níveis do básico ao avançado.
+                    </div>
+                </div>
+                
+                 <!-- FAQ Item 4 -->
+                <div class="group bg-[#052e16] rounded-2xl border border-white/5 overflow-hidden transition-all hover:border-[#9EFF00]/30" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center">
+                        <span class="font-bold text-white text-lg">Posso fazer mais de uma trilha ao mesmo tempo?</span>
+                        <i class="fas fa-plus text-[#9EFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                        Claro! Você pode explorar quantas trilhas quiser e fazer múltiplos cursos simultaneamente. Aprenda no seu ritmo e personalize sua jornada de aprendizado.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#01150a] py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-black text-white mb-4">KiBarato <span class="text-[#9EFF00]">Educa</span></h3>
+                    <p class="text-gray-400 max-w-sm">Transforme seu currículo com mais de +1000 cursos, 19 trilhas de aprendizado e cursos de idiomas. Tudo em um só lugar.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#trilhas" class="hover:text-[#9EFF00] transition-colors">Trilhas</a></li>
+                        <li><a href="#idiomas" class="hover:text-[#9EFF00] transition-colors">Idiomas</a></li>
+                        <li><a href="#beneficios" class="hover:text-[#9EFF00] transition-colors">Benefícios</a></li>
+                        <li><a href="#faq" class="hover:text-[#9EFF00] transition-colors">Dúvidas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-[#9EFF00] transition-colors">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-[#9EFF00] transition-colors">Privacidade</a></li>
+                        <li><a href="#" class="hover:text-[#9EFF00] transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2024 Kibarato Tecnologia. Todos os direitos reservados.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#9EFF00] hover:text-[#022C15] transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#9EFF00] hover:text-[#022C15] transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#9EFF00] hover:text-[#022C15] transition-all"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5511983207820" class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform animate-bounce group">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="absolute right-full mr-4 bg-[#022C15] text-white px-3 py-1 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Fale Conosco</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#022C15]/90', 'backdrop-blur-md', 'shadow-lg', 'py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('bg-[#022C15]/90', 'backdrop-blur-md', 'shadow-lg', 'py-2');
+                nav.classList.add('py-4');
+            }
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+            });
+        });
+    </script
+    </script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+    </style>
+</body>
+</html>
