@@ -863,6 +863,21 @@
                 }
             }, 500);
         }
+
+        // SCRIPT DE REDIRECIONAMENTO - Apenas CTAs para o checkout
+        (function() {
+            const checkoutURL = 'https://www.boon.clubecerto.com.br/checkout/0577b8cd-7ed9-4aab-a8b0-a6f87e2a326c?periodicidade=Anual&idIndicador=f939ab9b-8396-4cdc-b767-1569de7c4553';
+            const oldAppURL = 'https://app.kibarato.com.br';
+            
+            window.addEventListener('DOMContentLoaded', function() {
+                // Seleciona apenas links que apontam para o app antigo
+                const appLinks = document.querySelectorAll('a[href="' + oldAppURL + '"]');
+                
+                appLinks.forEach(function(link) {
+                    link.href = checkoutURL;
+                });
+            });
+        })();
     </script>
     <style>
         @keyframes float {
